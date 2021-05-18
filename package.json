@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "자바스크립트를 이용한 반응형 웹 개발",
   "main": "index.html",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeungHe0n/responsive-web.git"
@@ -14,5 +13,6 @@
   "bugs": {
     "url": "https://github.com/SeungHe0n/responsive-web/issues"
   },
-  "homepage": "https://github.com/SeungHe0n/responsive-web#readme"
+  "homepage": "https://github.com/SeungHe0n/responsive-web#readme",
+  "dependencies": {}
 }
