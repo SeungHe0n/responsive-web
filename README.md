@@ -8,3 +8,7 @@
 * Responsive Web
 
 목표: 바닐라자바스크립트 SPA
+
+css
+* 레이아웃 정리 (flex)
+* 괜찮은 무료 글꼴 찾아서 적용
