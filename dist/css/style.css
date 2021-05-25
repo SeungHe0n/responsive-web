@@ -1,54 +1,12 @@
 @charset "UTF-8";
 
-/* reset css */
-/* body, p, div */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body, div, p {
 	margin: 0;
 	padding: 0;
-	/* border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline; */
-}
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
 }
 body {
-	line-height: 1;
+    background-color: black;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-body {
-    background-color: white;
-} */
 
 /* link */
 a:link, a:visited {
@@ -59,40 +17,45 @@ a:hover {
     color: gray;
 }
 a:active {
-    color: #0d6efd;
+    color: #3498db;
 }
 
 /* header */
 .header {
-    padding: 10px 150px;
-    height: 50px;
-    align-self: center;
+    background-color: white;
+    height: 70px;
 }
-.header p{
-    padding: 15px;
-    display: inline-block;
+.container {
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 50px;
+}
+.nav-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar p{
     user-select: none;
     font-weight: bold;
     font-size: 1.1rem;
 }
-.header a{
-    padding: 15px;
-    display: inline-block;
+.nav-bar ul {
+    padding: 0;
 }
-.nav {
-    list-style-type: none;
-    float: right;
-}
-.nav li {
-    display: inline-block;
+.nav-bar li {
+    display: inline;
+    padding-left: 20px;
 }
 
 /* contents */
 .contents {
-    padding: 10px 150px;
+    background-color: burlywood;
     height: 600px;
-    text-align: center;
 }
+
 .contents p {
     font-size: 2rem;
     padding: 200px 0 50px 0;
@@ -111,7 +74,7 @@ a:active {
 }
 .btn {
     color: white;
-    background-color: #0d6efd;
+    background-color: #3498db;
 }
 
 /* footer */
@@ -119,14 +82,4 @@ a:active {
     padding: 5px 0;
     color: lightgrey;
     text-align: center;
-}
-
-@media screen and (min-width: 700px) {
-    
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-
 }
