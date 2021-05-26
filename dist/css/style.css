@@ -3,7 +3,6 @@
 body, div, p {
 	margin: 0;
 	padding: 0;
-    box-sizing: border-box;
 }
 
 /* link */
@@ -25,6 +24,8 @@ a:active {
 }
 .container {
     height: 100%;
+    margin: auto;
+    max-width: 1200px;
     padding: 0 50px;
 }
 .nav-bar {
