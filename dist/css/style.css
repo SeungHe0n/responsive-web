@@ -92,3 +92,40 @@ a:active {
     color: lightgrey;
     text-align: center;
 }
+
+/* login html */
+.small-container {
+    background-color: white;
+    padding: 80px;
+    border: 0.01rem solid lightgrey;
+    box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    width: 300px;
+    margin: 15vh auto 0 auto;
+}
+.big-logo {
+    font-size: 2rem;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form input {
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    font-size: 1rem;
+    border: 0.01rem solid grey;
+    border-radius: 0.2rem;
+}
+.login-form button {
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 0.2rem;
+    color: white;
+    background-color: #3498db;
+}
