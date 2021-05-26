@@ -3,9 +3,7 @@
 body, div, p {
 	margin: 0;
 	padding: 0;
-}
-body {
-    background-color: black;
+    box-sizing: border-box;
 }
 
 /* link */
@@ -27,8 +25,6 @@ a:active {
 }
 .container {
     height: 100%;
-    max-width: 1200px;
-    margin: auto;
     padding: 0 50px;
 }
 .nav-bar {
@@ -52,27 +48,39 @@ a:active {
 
 /* contents */
 .contents {
-    background-color: burlywood;
-    height: 600px;
 }
-
-.contents p {
+.main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 230px 0;
+}
+.main p {
     font-size: 2rem;
-    padding: 200px 0 50px 0;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
-.form {
+.search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.search input {
     padding: 1rem;
     font-size: 1rem;
     border: 0;
-    border-radius: 0.3rem;
-}
-.input {
-    background-color: beige;
+    border-radius: 1rem 0 0 1rem;
+    background-color: lightgrey;
     outline: 0;
-    width: 35%;
+    width: 50%;
+    max-width: 350px;
 }
-.btn {
+.search button {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 0 1rem 1rem 0;
     color: white;
     background-color: #3498db;
 }
