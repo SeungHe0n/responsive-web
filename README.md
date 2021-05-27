@@ -4,6 +4,7 @@
 * HTML5 + CSS3
 * JavaScript
 * Node.js
+* Mongodb (NoSQL)
 * SPA
 * Responsive Web
 
