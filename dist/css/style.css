@@ -181,14 +181,14 @@ a:active {
 }
 
 .project {
-    margin: 15px 0;
+    margin-top: 15px;
 }
 .lifeline {
-    height: 20px;
+    height: 40px;
 }
 .lifeline hr {
     position: relative;
-    bottom: 11px;
+    bottom: 21px;
     height: 2px;
     background: linear-gradient(to right, #eee, #000 3%, #000 97%, #eee);
     border: 0;
@@ -209,10 +209,22 @@ a:active {
     text-align: center;
 }
 .circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.circle div {
     background-color: black;
+    margin: 5px;
     width: 10px;
     height: 10px;
     border-radius: 100%;
+}
+.circle:hover div {
+    width: 15px;
+    height: 15px;
 }
 
 .total-mark {

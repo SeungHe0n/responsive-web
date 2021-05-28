@@ -5,10 +5,8 @@
 * JavaScript
 * Node.js
 * Mongodb (NoSQL)
-* SPA
 * Responsive Web
-
-목표: 바닐라자바스크립트 SPA
+* SPA
 
 html + css
 * 나중에 메인에 컨텐츠 추가 (레이아웃 변경)
