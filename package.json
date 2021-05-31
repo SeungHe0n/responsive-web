@@ -14,5 +14,7 @@
     "url": "https://github.com/SeungHe0n/responsive-web/issues"
   },
   "homepage": "https://github.com/SeungHe0n/responsive-web#readme",
-  "dependencies": {}
+  "dependencies": {
+    "mongoose": "^5.12.12"
+  }
 }
