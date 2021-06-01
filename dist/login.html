@@ -10,12 +10,12 @@
 <body>
   <div class="small-container">
     <div class="big-logo">POFO</div>
-    <form class="login-form">
+    <form class="login-form" id="login-form">
       <p>Nickname or Email</p>
-      <input type="text" placeholder="Enter the nickname or email">
+      <input type="email" id="email" autofocus placeholder="Enter the email">
       <p>Password</p>
-      <input type="password" placeholder="Enter the password">
-      <button type="submit">Login</button>
+      <input type="password" id="password" placeholder="Enter the password">
+      <button type="submit" onclick="login()">Login</button>
     </form>
   </div>
   <script src="js/login.js"></script>
