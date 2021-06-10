@@ -1,20 +1,39 @@
 const http = require("http");
-var fs = require("fs");
+const fs = require("fs");
 const mongoose = require("mongoose");
 
 const hostname = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    var url = req.url;
     if (req.url == "/") {
-        url = "/index.html";
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(fs.readFile(__dirname + "/index.html"));
     }
-    if(req.url == '/favicon.ico'){
-      return res.writeHead(404);
-    }
-    res.end(fs.readFileSync(__dirname + url));
+    fs.readFile("./" + req.url, function (err, data) {
+        if (!err) {
+            var dotoffset = req.url.lastIndexOf(".");
+            var mimetype =
+                dotoffset == -1
+                    ? "text/plain"
+                    : {
+                          ".html": "text/html",
+                          ".ico": "image/x-icon",
+                          ".jpg": "image/jpeg",
+                          ".png": "image/png",
+                          ".gif": "image/gif",
+                          ".css": "text/css",
+                          ".js": "text/javascript",
+                      }[req.url.substr(dotoffset)];
+            res.setHeader("Content-type", mimetype);
+            res.end(data);
+            console.log(req.url, mimetype);
+        } else {
+            console.log("file not found: " + req.url);
+            res.writeHead(404, "Not Found");
+            res.end();
+        }
+    });
 });
 
 server.listen(port, hostname, () => {
