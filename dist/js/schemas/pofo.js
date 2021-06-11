@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const projectSchema = require("./project");
+const mongoose = require('mongoose');
+const projectSchema = require('./project');
 
 const { Schema } = mongoose;
 const pofoSchema = new Schema({
@@ -8,13 +8,15 @@ const pofoSchema = new Schema({
     field: String,
     contact: [String],
     about: String,
-    projects: [{
-        startDate: Date,
-        endDate: Date,
-        title: String,
-        techStack: [String],
-        contents: String
-    }]
+    projects: [
+        {
+            startDate: Date,
+            endDate: Date,
+            title: String,
+            techStack: [String],
+            contents: String,
+        },
+    ],
 });
 
-module.exports = mongoose.model("Pofo", pofoSchema);
+module.exports = mongoose.model('Pofo', pofoSchema);
