@@ -4,7 +4,7 @@
   "description": "자바스크립트를 이용한 반응형 웹 개발",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node dist/js/server/app.js"
   },
   "repository": {
     "type": "git",
