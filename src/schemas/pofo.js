@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const projectSchema = require('./project');
 
 const { Schema } = mongoose;
 const pofoSchema = new Schema({

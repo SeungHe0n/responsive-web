@@ -6,10 +6,10 @@ const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../index.html'));
+    res.sendFile(path.join(__dirname, '../static/index.html'));
 });
 
-app.use(express.static('dist'));
+app.use(express.static('static'));
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
