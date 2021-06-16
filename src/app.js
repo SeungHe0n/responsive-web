@@ -13,18 +13,32 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.post('/join', (req, res) => {
-    res.json(req.body);
     const user = new User({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-    }).save(function (err, user) {
+    }).save(function (err) {
         if (err) return console.error(err);
     });
-    res.end();
+    res.sendFile(path.join(__dirname, '../static/index.html'));
+});
+
+app.post('/login', (req, res) => {
+    User.findOne({ email: req.body.email }, (err, docs) => {
+        if (!err) {
+            if (docs.password === req.body.password) {
+                res.send('로그인에 성공했습니다.');
+            } else {
+                res.send('로그인에 실패했습니다.');
+            }
+            res.end();
+        } else {
+            return console.error(err);
+        }
+    });
 });
 
 app.use(express.static('static'));
