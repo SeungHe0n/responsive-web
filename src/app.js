@@ -11,13 +11,17 @@ db();
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../static/index.html'));
 });
-app.get('/login', (req, res) => {
-    const pje = new User({
-        name: 'parkjung',
-        email: 'pje@g.com',
-        password: 'qwerasdf',
-    });
-    pje.save(function (err, pje) {
+
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+app.post('/join', (req, res) => {
+    res.json(req.body);
+    const user = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+    }).save(function (err, user) {
         if (err) return console.error(err);
     });
     res.end();
