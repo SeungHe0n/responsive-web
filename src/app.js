@@ -1,19 +1,25 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const cookieParser = require('cookie-parser');
 const db = require('./db');
 const User = require('./schemas/user');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
 
-db();
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../static/index.html'));
-});
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+db();
+
+app.get('/', (req, res) => {
+
+    res.cookie('id', 'aabb');
+    console.log('cookies: ', req.cookies);
+
+    res.sendFile(path.join(__dirname, '../static/index.html'));
+});
 
 app.post('/join', (req, res) => {
     User.findOne({ email: req.body.email }, (err, docs) => {
